@@ -20,3 +20,17 @@ cp .env.example .env
 ```
 npm start
 ```
+
+
+## To setup on production server
+- [ ] to install mysql kindly follow steps from bellow link
+https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04
+
+- [ ] to install node & npm kindly follow steps from bellow link
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04
+
+- [ ] to install pm2 to run node server in background kindly follow steps from bellow link
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-20-04
+
+- [ ] clone project on server and follow points from "Getting started"
+- [ ] open incoming port which configured in environment file
