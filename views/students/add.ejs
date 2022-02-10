@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		<%= title %>
+	</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> </head>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+<body>
+  <div class="container">
+    <h2 class="text-center"><%= title %></h2>
+    <% if (messages.error) { %>
+      <p style="color:red">
+        <%- messages.error %>
+      </p>
+    <% } %>
+    <% if (messages.success) { %>
+      <p style="color:green">
+        <%- messages.success %>
+      </p>
+    <% } %>
+    <form action="/students/add" method="post" name="formAddStudent" enctype="multipart/form-data">
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="text" name="first_name" class="form-control" id="first_name" placeholder="Enter first name" value="<%- first_name %>">
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Enter last name" value="<%- last_name %>">
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" value="<%- email %>">
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="form-group">
+            <label for="class">Class</label>
+            <input type="text" name="class_no" class="form-control" id="class" placeholder="Enter class"  value="<%- class_no %>">
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="form-group">
+            <label for="profilepicture">Profile Picture</label>
+            <input type="file" name="profile_picture" class="form-control" id="profile_picture">
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <label for="profilepicture">Select Subjects</label>
+          <div class="form-check">
+              <% for(var i=0; i<subjects.length; i++) {%>
+                <input type="checkbox" name="subjects[]" class="form-check-input" id="<%= subjects[i].id %>" value="<%= subjects[i].id %>">
+                <label class="form-check-label" for="<%= subjects[i].id %>"><%= subjects[i].name %></label>
+              <% } %>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-12">
+          <input type="submit" class="btn btn-primary" value="Add Student">
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

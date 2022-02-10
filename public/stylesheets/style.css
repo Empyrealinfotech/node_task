@@ -1,0 +1,29 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #FFFFFF;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.panel-default.custom {
+  border-color: #f2f91d;
+  border-radius: 0px;
+}
+
+.logo {
+  background-color: #FFFFFF;
+  align-items: center;
+  text-align: center;
+}
+
+.logo img {
+  margin: 15px auto;
+}
+
+.form-check-label {
+  margin-bottom: 0;
+  margin-right: 35px;
+}
