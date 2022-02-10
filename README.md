@@ -23,11 +23,13 @@ cp .env.example .env
 npm start
 ```
 ## For access API
-- Methos: POST
+- Application: Postman
+- Request Method: POST
 - URL: {baseUrl}/api/vi/get/students
 - Request param `field` (add comma seperated values): Allowed values [first_name, last_name, email, class_no, profile_picture, createdAt, updatedAt]
 
 ## For Add students
+- Application: Web Browser
 - URL: {baseUrl}/students
 
 ## To setup on production server
