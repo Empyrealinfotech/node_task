@@ -15,6 +15,8 @@ cp .env.example .env
 ```
 - [ ] configure enviornment variables for mysql & aws s3 in .env file
 
+- [ ] import mysql database from sql directory
+
 - [ ] to start server run below command in terminal
 
 ```
